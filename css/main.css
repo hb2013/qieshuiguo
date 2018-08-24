@@ -1,0 +1,88 @@
+root {
+    display: block;
+}
+
+body{
+    background-color: #000;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-image: url(../sprites/bg_tile.jpg);
+}
+
+*, *:before, *:after {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input, input:before, input:after {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+}
+
+::selection { background: transparent;color:inherit; }
+::-moz-selection { background: transparent;color:inherit; }
+
+#canvas{
+    position: fixed;
+}
+
+canvas {
+    image-rendering: optimizeSpeed;
+    image-rendering:-o-crisp-edges;
+    image-rendering:-webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    -ms-touch-action: none;
+}
+
+.ani_hack{
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* mobile webkit */
+}
+
+/***************FONTS*******************/
+@font-face {
+    font-family: 'katanaregular';
+    src: url('katanf-webfont.eot');
+    src: url('katanf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('katanf-webfont.woff') format('woff'),
+         url('katanf-webfont.ttf') format('truetype'),
+         url('katanf-webfont.svg#katanaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.pagediv{position: absolute;width:1024px;height:768px;display:none;}
+.page_1{display:block;}
+
+.p1-form,.p1-rule{display:none;}
+.forminput{width:370px;height:55px;background: rgba(0,0,0,0);padding:0px 20px;box-sizing: border-box;border:none;outline: none;}
+#username{position: absolute;top:55px;left:210px;}
+#phone{position: absolute;top:123px;left:210px;}
+#city{position: absolute;top:193px;left:210px;}
+#danwei{position: absolute;top:262px;left:210px;}
+.formbtn{position: absolute;top:340px;left:300px;width:170px;height:60px;background: rgba(0,0,0,0);}
+
+
+.p1-bg{position:absolute;top:0px;left:0px;width:1024px;height:768px;}
+.p1-form{position:absolute;top:168px;left:122px;width:780px;height:432px;background: url(../small/1-form.png) no-repeat;background-size:100%;}
+.p1-rule{position:absolute;top:168px;left:122px;width:780px;height:432px;}
+.p1-start-btn{position:absolute;top:426px;left:79px;width:279px;height:279px;}
+.prule-btn{position:absolute;top:426px;left:435px;width:323px;height:323px;}
